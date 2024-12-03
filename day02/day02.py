@@ -28,20 +28,6 @@ def isSafe(data):
     return False
 
 
-def makeAssending(data):
-    for i in range(len(data)-1):
-        newdata = data[:i] + data[i+1:]
-        if isAccending(newdata): return newdata
-    return data
-
-
-def makeDecending(data):
-    for i in range(len(data)-1):
-        newdata = data[:i] + data[i+1:]
-        if isDecending(newdata): return newdata
-    return data
-
-
 def isSafeDampened(data:list):
 
     if isSafe(data): return True
