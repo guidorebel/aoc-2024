@@ -1,10 +1,13 @@
 
+f = open("day01\\input.txt")
+lines = f.read().split("\n")
+f.close()
+
 left = []
 right = []
 
-f = open("day01\\input.txt")
-for line in f.readlines():
-    values = [int(i) for i in line.split()]
+for line in lines:
+    values = list(map(int, line.split()))
     left.append(values[0])
     right.append(values[1])
 
