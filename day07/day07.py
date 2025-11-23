@@ -1,4 +1,5 @@
 
+import fileinput
 from itertools import product
 
 
@@ -26,8 +27,7 @@ def evaluate (operators, result, values):
 total1 = 0
 total2 = 0
 
-f = open("day07\\input.txt")
-for line in f.read().split("\n"):
+for line in fileinput.input(files = "day07\\input.txt"):
     
     result, values = line.split(":")
     result = int(result)
@@ -38,8 +38,6 @@ for line in f.read().split("\n"):
 
     # Part 2: operators * + |
     if evaluate ("*+|", result, values): total2 += result
-
-f.close()
 
 print (f"Part 1: {total1}")
 print (f"Part 2: {total2}")
